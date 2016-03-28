@@ -24,6 +24,7 @@ function loadPlugins(source) {
 
 
 var SWITCHES = [
+   ['*', '--compile FILES', 'list of kajs files or folders to compile (comma seperated)']
   ['-c', '--compile FILES', 'list of kajs files or folders to compile (comma seperated)'],
   ['-o', '--output DIR',    'set the directory for compiled JavaScript'],
   ['-w', '--watch',         'watch scripts for changes, and recompile'],
@@ -34,7 +35,7 @@ var SWITCHES = [
 ]
 
 function parseOptions() {
-  oparser = new optparse.OptionParser(SWITCHES, "kajs compiles .k files to Kajs. run 'kajs help' for more info")
+  oparser = new optparse.OptionParser(SWITCHES, "kajs compiles .kajs files to Javascript. run 'kajs help' for more info")
   //var o = options =
 
   // options.run = false //  !(o.compile || o.print || o.lint)
@@ -42,6 +43,11 @@ function parseOptions() {
   //console.log(process.argv)
   //sources = options.slice(2, options.length)
 
+  oparser.on('*', function(o, s) {
+    sources = s.split(",")
+    options.compile = true
+  });
+  
   oparser.on('compile', function(o, s) {
     sources = s.split(",")
     options.compile = true
@@ -106,7 +112,7 @@ function compileScripts() {
               }
             })
           }
-          else if(topLevel || path.extname(source) == '.k') {
+          else if(topLevel || path.extname(source) == '.kajs') {
             fs.readFile(source, function(err, code) { compileScript(source, code.toString(), base) })
             if(options.watch) watch(source, base)
           }
