@@ -1,0 +1,20 @@
+{
+  "name": "kajs",
+  "version": "0.1.0",
+  "description": "Enhanced Syntax for Javascript",
+  "keywords": ["javascript", "language", "compiler", "coffeescript", "altjs"],
+  "author": "Kabir Shah",
+  "licenses":     [{
+    "type":       "MIT"
+  }],
+  "bin": { "kajs": "./bin/kajs", "knode": "./bin/knode" },
+  "directories" : {
+    "lib" : "./lib"
+  },
+  "repository": "http://github.com/KingPixil/kajs",
+  "engines" : { "node": ">= 0.3.0" },
+  "main": "./lib/index.js",
+  "dependencies" : {
+    "optparse" : "*"
+  }
+}

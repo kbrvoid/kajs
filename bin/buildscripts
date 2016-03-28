@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+require("brequire")("./lib")
+  .module_base("kajs")
+  .include_lib()
+  // .inspect()
