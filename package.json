@@ -1,6 +1,6 @@
 {
   "name": "kajs",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Enhanced Syntax for Javascript",
   "keywords": ["javascript", "language", "compiler", "coffeescript", "altjs"],
   "author": "Kabir Shah",
