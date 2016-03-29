@@ -24,7 +24,7 @@ function loadPlugins(source) {
 
 
 var SWITCHES = [
-   ['*', '--compile FILES', 'list of kajs files or folders to compile (comma seperated)']
+   ['*', '--compile FILES', 'list of kajs files or folders to compile (comma seperated)'],
   ['-c', '--compile FILES', 'list of kajs files or folders to compile (comma seperated)'],
   ['-o', '--output DIR',    'set the directory for compiled JavaScript'],
   ['-w', '--watch',         'watch scripts for changes, and recompile'],
@@ -43,7 +43,7 @@ function parseOptions() {
   //console.log(process.argv)
   //sources = options.slice(2, options.length)
 
-  oparser.on('*', function(o, s) {
+  oparser.on(function(o, s) {
     sources = s.split(",")
     options.compile = true
   });
