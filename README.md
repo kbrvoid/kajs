@@ -24,6 +24,11 @@ No need for `this`, just replace it with `@`
 
 ### Banner coming soon
 
+# Credits
+
+This is a project built on top of Kaffiene, which is another awesome language. I have added a couple more features to make it even more awesome!
+
+
 # License
 
 MIT License, &copy; Kabir Shah
