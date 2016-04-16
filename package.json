@@ -15,6 +15,9 @@
       "type": "MIT"
     }
   ],
+  "scripts": {
+    "test": "bin/kajs -c test/test.kajs"
+  },
   "bin": {
     "kajs": "./bin/kajs",
     "knode": "./bin/knode"

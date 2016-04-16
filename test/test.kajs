@@ -1,0 +1,5 @@
+function printStr(str) {
+    return str
+}
+
+print printStr "Testing KAJS"

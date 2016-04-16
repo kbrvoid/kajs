@@ -131,7 +131,7 @@ function compileScripts() {
 function compileScript(source, code, base) {
   var o = options
   try {
-    var js = '/* Generated With KAJS ' + VERSION + ' */\n' + new Kajs().compile(code)
+    var js = '/* Generated With KAJS ' + VERSION + ' */\n' +  '(function(){\r\n' + new Kajs().compile(code) + '\r\n})();'
     if(o.print)         print(js)
     else if(o.compile)  writeJs(source, js, base)
   }
