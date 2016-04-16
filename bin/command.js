@@ -159,6 +159,9 @@ function writeJs(source, js, base) {
         console.log('\x1b[36m', '======= KAJS =======' ,'\x1b[0m')
         console.log('\x1b[35m',source, '\x1b[32m', 'Compiled successfully! ✓', '\x1b[0m' ); 
       }
+      
+        console.log('\x1b[36m', '======= KAJS =======' ,'\x1b[0m')
+        console.log('\x1b[35m',source, '\x1b[32m', 'Compiled successfully! ✓', '\x1b[0m' );
     })
   }
   fs.exists(dir, function(exists) {
