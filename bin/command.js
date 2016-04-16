@@ -6,7 +6,9 @@ var Kajs = require("./../lib/index"),
     util =           require("util"),
     sources = [],
     options = {},
-    oparser
+    oparser,
+    pjson = require('./package.json'),
+    VERSION = pjson.version
 
 
 function loadPlugins(source) {
@@ -129,7 +131,7 @@ function compileScripts() {
 function compileScript(source, code, base) {
   var o = options
   try {
-    var js = '/* Generated With KAJS */\n' + new Kajs().compile(code)
+    var js = '/* Generated With KAJS ' + VERSION + ' */\n' + new Kajs().compile(code)
     if(o.print)         print(js)
     else if(o.compile)  writeJs(source, js, base)
   }
