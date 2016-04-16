@@ -7,7 +7,7 @@ var Kajs = require("./../lib/index"),
     sources = [],
     options = {},
     oparser,
-    pjson = require('./package.json'),
+    pjson = require('../package.json'),
     VERSION = pjson.version
 
 
