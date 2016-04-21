@@ -1,5 +1,12 @@
+caseOne = true
+caseTwo = true
+
 function printStr(str) {
     return str
 }
 
+if(caseOne and caseTwo) {
+
 print printStr "Testing KAJS"
+
+}
